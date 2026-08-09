@@ -1,16 +1,24 @@
 {
   "meta": {
-    "title": "孔子語錄三語資料庫（Part 3 仁德篇）",
+    "title": "孔子語錄三語資料庫（Part 3 仁德篇・擴充）",
     "title_en": "Confucius Quotes Trilingual Database (Part 3: On Benevolence and Virtue)",
-    "version": "1.0",
-    "languages": ["zh_tw", "zh_cn", "en"],
+    "version": "1.1",
+    "languages": [
+      "zh_tw",
+      "zh_cn",
+      "en"
+    ],
     "built": "2026-08-09",
     "source": "《論語》通行本",
     "structure": "每則含原文/出處/對象/語境/譯文/詳解/現代應用，三語並列"
   },
   "category": {
     "id": "benevolence",
-    "name": { "zh_tw": "仁德", "zh_cn": "仁德", "en": "On Benevolence and Virtue" }
+    "name": {
+      "zh_tw": "仁德",
+      "zh_cn": "仁德",
+      "en": "On Benevolence and Virtue"
+    }
   },
   "quotes": [
     {
@@ -281,6 +289,141 @@
         "zh_tw": "極端情境不常見，但「底線問題」天天有：出賣同事換升遷、說謊保飯碗、沉默縱容不義。守住不該越的線，就是平常日子裡的殺身成仁。",
         "zh_cn": "极端情境不常见，但「底线问题」天天有：出卖同事换升迁、说谎保饭碗、沉默纵容不义。守住不该越的线，就是平常日子里的杀身成仁。",
         "en": "Extremes are rare, but line-crossing temptations are daily: betraying a colleague for promotion, lying to keep a job, silence that abets wrong. Holding the line you must not cross — that is “fulfilling benevolence” in ordinary life."
+      }
+    },
+    {
+      "id": "rd-011",
+      "original": "子曰：「里仁為美。擇不處仁，焉得知？」",
+      "source": "論語·里仁第四",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "里仁篇開章，論環境對修養的影響——居住要選有仁德的地方。",
+        "zh_cn": "里仁篇开章，论环境对修养的影响——居住要选有仁德的地方。",
+        "en": "The opening of Liren — on how environment shapes character: dwell where benevolence prevails."
+      },
+      "translation": {
+        "zh_tw": "居住的地方，有仁德風氣才好。選擇住處而不居於仁德之地，怎麼算得上明智呢？",
+        "zh_cn": "居住的地方，有仁德风气才好。选择住处而不居于仁德之地，怎么算得上明智呢？",
+        "en": "It is beautiful to dwell where benevolence prevails. To choose a dwelling without benevolence — how can that be called wise?"
+      },
+      "explanation": {
+        "zh_tw": "「里」是居住、鄰里。孔子重視環境的薰陶：人受習染影響極大，住處、圈子、環境選錯了，再好的天資也會被帶偏。",
+        "zh_cn": "「里」是居住、邻里。孔子重视环境的熏陶：人受习染影响极大，住处、圈子、环境选错了，再好的天资也会被带偏。",
+        "en": "“Li” means dwelling and neighborhood. Confucius took environment seriously: people are deeply shaped by what surrounds them; choose poorly — dwelling, circle, milieu — and fine nature is led astray."
+      },
+      "application": {
+        "zh_tw": "選擇城市、公司、朋友圈，都是「擇不處仁」。環境的影響比意志力大，把自己放進能成長的環境，是最划算的投資。",
+        "zh_cn": "选择城市、公司、朋友圈，都是「择不处仁」。环境的影响比意志力大，把自己放进能成长的环境，是最划算的投资。",
+        "en": "Choosing a city, a company, a circle of friends is “choosing a dwelling.” Environment outweighs willpower; placing yourself where you can grow is the best investment."
+      }
+    },
+    {
+      "id": "rd-012",
+      "original": "子曰：「不仁者不可以久處約，不可以長處樂。仁者安仁，知者利仁。」",
+      "source": "論語·里仁第四",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "里仁篇論仁者與不仁者在窮困與安樂中的不同表現。",
+        "zh_cn": "里仁篇论仁者与不仁者在穷困与安乐中的不同表现。",
+        "en": "From Liren — how the benevolent and the not-benevolent fare in poverty and plenty."
+      },
+      "translation": {
+        "zh_tw": "沒有仁德的人，不能長久處在窮困中，也不能長久處在安樂中。仁者安於仁，智者以仁為有利而行仁。",
+        "zh_cn": "没有仁德的人，不能长久处在穷困中，也不能长久处在安乐中。仁者安于仁，智者以仁为有利而行仁。",
+        "en": "The not-benevolent cannot long endure poverty, nor long abide in enjoyment. The benevolent rest in benevolence; the wise, seeing its benefit, practice it."
+      },
+      "explanation": {
+        "zh_tw": "窮困時，不仁者容易鋌而走險；安樂時，不仁者容易沉溺放縱——兩頭都守不住。仁者則不然：窮困不失其守，安樂不亂其心。",
+        "zh_cn": "穷困时，不仁者容易铤而走险；安乐时，不仁者容易沉溺放纵——两头都守不住。仁者则不然：穷困不失其守，安乐不乱其心。",
+        "en": "In poverty the not-benevolent take desperate risks; in plenty they sink into indulgence — they hold neither end. The benevolent differ: poverty does not shake their integrity, nor plenty their composure."
+      },
+      "application": {
+        "zh_tw": "檢驗一個人（或自己），不在順境，而在逆境與富貴兩個極端。窮時守得住，富時不變形，才算是真有底子。",
+        "zh_cn": "检验一个人（或自己），不在顺境，而在逆境与富贵两个极端。穷时守得住，富时不变形，才算是真有底子。",
+        "en": "Test character not in comfort but at the two extremes: poverty and prosperity. Holding firm in want and staying undefiled in plenty — that is real substance."
+      }
+    },
+    {
+      "id": "rd-013",
+      "original": "子曰：「君子成人之美，不成人之惡。小人反是。」",
+      "source": "論語·顏淵第十二",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "顏淵篇論君子小人在成全他人善惡上的分野。",
+        "zh_cn": "颜渊篇论君子小人在成全他人善恶上的分野。",
+        "en": "From Yanyuan — the line between noble man and petty man in helping or harming others' deeds."
+      },
+      "translation": {
+        "zh_tw": "君子成全別人的好事，不促成別人的壞事。小人正好相反。",
+        "zh_cn": "君子成全别人的好事，不促成别人的坏事。小人正好相反。",
+        "en": "The noble man helps others accomplish what is good and never abets what is bad. The petty man does the opposite."
+      },
+      "explanation": {
+        "zh_tw": "「成人之美」是見人向善便推一把；「不成人之惡」是見人將錯便拉一把，至少不火上澆油。小人的心態是見不得人好，樂見人壞。",
+        "zh_cn": "「成人之美」是见人向善便推一把；「不成人之恶」是见人将错便拉一把，至少不火上浇油。小人的心态是见不得人好，乐见人坏。",
+        "en": "To complete others' good is to give a push when they aim at virtue; to not abet their evil is to pull them back, or at least pour no oil on the fire. The petty man begrudges others' good and delights in their ruin."
+      },
+      "application": {
+        "zh_tw": "同事要升遷、朋友要創業，幫一把是成人之美；明知朋友要幹糊塗事還慫恿，就是成人之惡。問自己：我這雙手，是在推人上坡還是下坡？",
+        "zh_cn": "同事要升迁、朋友要创业，帮一把是成人之美；明知朋友要干糊涂事还怂恿，就是成人之恶。问自己：我这双手，是在推人上坡还是下坡？",
+        "en": "Help a colleague's promotion or a friend's venture — that completes good. Urging a friend into folly is abetting evil. Ask: are my hands pushing people uphill or downhill?"
+      }
+    },
+    {
+      "id": "rd-014",
+      "original": "子曰：「仁遠乎哉？我欲仁，斯仁至矣。」",
+      "source": "論語·述而第七",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "述而篇，孔子論仁並非遠不可及——想要，它就來了。",
+        "zh_cn": "述而篇，孔子论仁并非远不可及——想要，它就来了。",
+        "en": "From Shuer — benevolence is not far off: desire it, and it arrives."
+      },
+      "translation": {
+        "zh_tw": "仁離我們很遠嗎？我想要仁，仁就到了。",
+        "zh_cn": "仁离我们很远吗？我想要仁，仁就到了。",
+        "en": "Is benevolence far away? If I desire benevolence, benevolence is at hand."
+      },
+      "explanation": {
+        "zh_tw": "仁不是高不可攀的境界，而是當下的選擇——一念向善，即是仁的開端。孔子打破「仁是聖人專利」的錯覺，把行仁的門檻降到每個人的一念之間。",
+        "zh_cn": "仁不是高不可攀的境界，而是当下的选择——一念向善，即是仁的开端。孔子打破「仁是圣人专利」的错觉，把行仁的门槛降到每个人的一念之间。",
+        "en": "Benevolence is not an unattainable peak but a present choice — one good thought is its beginning. Confucius shatters the myth that benevolence belongs only to sages, lowering its threshold to a single intention in anyone."
+      },
+      "application": {
+        "zh_tw": "想做好事別等「等我準備好了」——讓座、道歉、幫一把，都是當下可做的仁。想做就做，仁不遠人。",
+        "zh_cn": "想做好事别等「等我准备好了」——让座、道歉、帮一把，都是当下可做的仁。想做就做，仁不远人。",
+        "en": "Do not wait to be “ready” for good deeds — yielding a seat, apologizing, lending a hand are all benevolence at hand. Benevolence is never far from people."
+      }
+    },
+    {
+      "id": "rd-015",
+      "original": "子曰：「君子義以為質，禮以行之，孫以出之，信以成之。君子哉！」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇論君子行事的四要素：義為本、禮為行、謙為言、信為成。",
+        "zh_cn": "卫灵公篇论君子行事的四要素：义为本、礼为行、谦为言、信为成。",
+        "en": "From Wei Linggong — the four elements of the noble man's conduct: righteousness as substance, ritual as practice, modesty in speech, good faith in completion."
+      },
+      "translation": {
+        "zh_tw": "君子以義為根本，依禮來實行，用謙遜的言語表達，靠誠信來完成。這真是君子啊！",
+        "zh_cn": "君子以义为根本，依礼来实行，用谦逊的言语表达，靠诚信来完成。这真是君子啊！",
+        "en": "The noble man takes rightness as his substance, practices it through ritual, expresses it with modesty, and completes it in good faith — that indeed is a noble man!"
+      },
+      "explanation": {
+        "zh_tw": "四個步驟完整勾勒君子成事之道：內在立義（方向對），外在行禮（做法對），出口謙遜（態度對），最終守信（收尾對）。四者缺一，事雖成而不圓。",
+        "zh_cn": "四个步骤完整勾勒君子成事之道：内在立义（方向对），外在行礼（做法对），出口谦逊（态度对），最终守信（收尾对）。四者缺一，事虽成而不圆。",
+        "en": "Four steps map the noble man's way of getting things done: establish rightness within (right direction), practice through ritual (right method), speak with modesty (right bearing), complete in good faith (right finish). Missing one, the deed is done but not whole."
+      },
+      "application": {
+        "zh_tw": "做任何重要的事前後，用四問檢查：方向正不正？做法得體不得體？說話謙不謙？承諾做到沒有？",
+        "zh_cn": "做任何重要的事前后，用四问检查：方向正不正？做法得体不得体？说话谦不谦？承诺做到没有？",
+        "en": "Before and after any important task, run four checks: Is the direction right? Is the method proper? Is the speech modest? Is the promise kept?"
       }
     }
   ]

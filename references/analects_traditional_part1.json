@@ -1,16 +1,24 @@
 {
   "meta": {
-    "title": "孔子語錄三語資料庫（Part 1 為學篇）",
+    "title": "孔子語錄三語資料庫（Part 1 為學篇・擴充）",
     "title_en": "Confucius Quotes Trilingual Database (Part 1: On Learning)",
-    "version": "1.0",
-    "languages": ["zh_tw", "zh_cn", "en"],
+    "version": "1.1",
+    "languages": [
+      "zh_tw",
+      "zh_cn",
+      "en"
+    ],
     "built": "2026-08-09",
     "source": "《論語》通行本",
     "structure": "每則含原文/出處/對象/語境/譯文/詳解/現代應用，三語並列"
   },
   "category": {
     "id": "learning",
-    "name": { "zh_tw": "為學", "zh_cn": "为学", "en": "On Learning" }
+    "name": {
+      "zh_tw": "為學",
+      "zh_cn": "为学",
+      "en": "On Learning"
+    }
   },
   "quotes": [
     {
@@ -254,6 +262,141 @@
         "zh_tw": "帶人、教人時忍住「直接給答案」的衝動，先讓對方自己試、自己想，卡住了再點一下；培訓的核心是教方法、練思維。",
         "zh_cn": "带人、教人时忍住「直接给答案」的冲动，先让对方自己试、自己想，卡住了再点一下；培训的核心是教方法、练思维。",
         "en": "Resist the urge to hand out answers; let the learner try and think first, then nudge when stuck. Real training teaches method and thinking, not answers."
+      }
+    },
+    {
+      "id": "wx-010",
+      "original": "子曰：「學如不及，猶恐失之。」",
+      "source": "論語·泰伯第八",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "泰伯篇論學習的態度——永遠覺得學得不夠快，又怕忘掉已學的。",
+        "zh_cn": "泰伯篇论学习的态度——永远觉得学得不够快，又怕忘掉已学的。",
+        "en": "From the chapter of Taibo — on the attitude of learning: always feeling one cannot keep up, and fearing to lose what one has gained."
+      },
+      "translation": {
+        "zh_tw": "學習就像生怕趕不上似的，趕上了還怕丟掉。",
+        "zh_cn": "学习就像生怕赶不上似的，赶上了还怕丢掉。",
+        "en": "Learn as if you could not catch up, and as if you feared losing what you have gained."
+      },
+      "explanation": {
+        "zh_tw": "這不是焦慮，是對學問的珍惜與敬畏。求知者永遠有兩重心情：往前看，覺得學海無涯；往後看，怕學了又忘。正是這兩重心情，讓人不自滿、不懈怠。",
+        "zh_cn": "这不是焦虑，是对学问的珍惜与敬畏。求知者永远有两重心情：往前看，觉得学海无涯；往后看，怕学了又忘。正是这两重心情，让人不自满、不懈怠。",
+        "en": "This is not anxiety but reverence for learning. The seeker always feels two pulls: looking ahead, the sea of learning has no shore; looking back, one fears losing what one has gained. These two feelings keep one from complacency and slack."
+      },
+      "application": {
+        "zh_tw": "技術迭代飛快的時代，保持「學如不及」的飢渴感：定期更新知識，同時反覆鞏固基本功。自滿是學習最大的敵人。",
+        "zh_cn": "技术迭代飞快的时代，保持「学如不及」的饥渴感：定期更新知识，同时反复巩固基本功。自满是学习最大的敌人。",
+        "en": "In an age of rapid change, keep the hunger of “learning as if unable to catch up”: refresh knowledge regularly while consolidating fundamentals. Complacency is learning's greatest enemy."
+      }
+    },
+    {
+      "id": "wx-011",
+      "original": "子曰：「十室之邑，必有忠信如丘者焉，不如丘之好學也。」",
+      "source": "論語·公冶長第五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "孔子自評：忠信之質人人可與我相比，我勝人處只在好學。",
+        "zh_cn": "孔子自评：忠信之质人人可与我相比，我胜人处只在好学。",
+        "en": "Confucius's self-assessment: in loyalty and good faith others may equal me; my only edge is the love of learning."
+      },
+      "translation": {
+        "zh_tw": "即使是十戶人家的小地方，一定有像我一樣忠信的人，只是不如我好學罷了。",
+        "zh_cn": "即使是十户人家的小地方，一定有像我一样忠信的人，只是不如我好学罢了。",
+        "en": "In any hamlet of ten households, there must be those as loyal and true as I — only none loves learning as I do."
+      },
+      "explanation": {
+        "zh_tw": "孔子不誇自己聰明，只承認一件事：我好學。他把天賦看得平常，把努力看得珍貴——忠信是品性，好學是選擇；品性靠天生，選擇靠自己。",
+        "zh_cn": "孔子不夸自己聪明，只承认一件事：我好学。他把天赋看得平常，把努力看得珍贵——忠信是品性，好学是选择；品性靠天生，选择靠自己。",
+        "en": "Confucius does not claim brilliance, only one thing: his love of learning. He treats talent as ordinary and effort as precious — loyalty is disposition, love of learning is choice; disposition is given, choice is one's own."
+      },
+      "application": {
+        "zh_tw": "與其羨慕別人聰明，不如承認自己可以靠好學勝出。智商不是天花板，持續學習才是。",
+        "zh_cn": "与其羡慕别人聪明，不如承认自己可以靠好学胜出。智商不是天花板，持续学习才是。",
+        "en": "Rather than envying the clever, admit that love of learning is your edge. IQ is not the ceiling; sustained learning is."
+      }
+    },
+    {
+      "id": "wx-012",
+      "original": "子入太廟，每事問。或曰：「孰謂鄹人之子知禮乎？入太廟，每事問。」子聞之，曰：「是禮也。」",
+      "source": "論語·八佾第三",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "孔子入魯國太廟助祭，每件事都請教；有人譏笑他不懂禮，他回答：這正是禮。",
+        "zh_cn": "孔子入鲁国太庙助祭，每件事都请教；有人讥笑他不懂礼，他回答：这正是礼。",
+        "en": "When Confucius assisted at the Grand Temple of Lu, he asked about everything. Mocked for seeming ignorant of ritual, he replied: this asking is itself ritual."
+      },
+      "translation": {
+        "zh_tw": "孔子進入太廟，每件事都發問。有人說：「誰說鄹人的兒子懂得禮呀？他進太廟，每件事都要問。」孔子聽說了，說：「這就是禮呀。」",
+        "zh_cn": "孔子进入太庙，每件事都发问。有人说：「谁说陬人的儿子懂得礼呀？他进太庙，每件事都要问。」孔子听说了，说：「这就是礼呀。」",
+        "en": "When Confucius entered the Grand Temple, he asked about everything. Someone said, “Who says the son of the man from Zou understands ritual? He enters the temple and asks about everything.” Hearing this, Confucius said, “That asking is itself ritual.”"
+      },
+      "explanation": {
+        "zh_tw": "孔子並非不懂禮，而是以「每事問」示範真正的禮——謙遜、不恥下問、對禮的敬畏。不懂裝懂是失禮，肯問才是合禮。",
+        "zh_cn": "孔子并非不懂礼，而是以「每事问」示范真正的礼——谦逊、不耻下问、对礼的敬畏。不懂装懂是失礼，肯问才是合礼。",
+        "en": "Confucius was not ignorant of ritual; his asking modeled true ritual — humility, unashamed questioning, reverence for the rites. Pretending to know is the discourtesy; asking is the courtesy."
+      },
+      "application": {
+        "zh_tw": "到了新環境、新崗位，不懂就問，不是丟臉，是專業。怕被笑而裝懂，才是真的失禮失分。",
+        "zh_cn": "到了新环境、新岗位，不懂就问，不是丢脸，是专业。怕被笑而装懂，才是真的失礼失分。",
+        "en": "In a new role or environment, asking is not shameful — it is professional. Pretending to know for fear of ridicule is the real failure."
+      }
+    },
+    {
+      "id": "wx-013",
+      "original": "子夏曰：「日知其所亡，月無忘其所能，可謂好學也已矣。」",
+      "source": "論語·子張第十九",
+      "speaker": "子夏",
+      "audience": null,
+      "context": {
+        "zh_tw": "子夏論「好學」的具體標準：每天知道新東西，每月不忘記已學的。",
+        "zh_cn": "子夏论「好学」的具体标准：每天知道新东西，每月不忘记已学的。",
+        "en": "Zixia's concrete standard for the love of learning: each day gain what you did not know; each month do not forget what you have mastered."
+      },
+      "translation": {
+        "zh_tw": "每天知道一些自己原先不知道的，每月不忘記自己已經學會的，就可以稱得上好學了。",
+        "zh_cn": "每天知道一些自己原先不知道的，每月不忘记自己已经学会的，就可以称得上好学了。",
+        "en": "He who daily knows what he lacks, and monthly does not forget what he has mastered, may indeed be called fond of learning."
+      },
+      "explanation": {
+        "zh_tw": "子夏把「好學」落到兩個可檢驗的動作：日知所亡——每天有新收穫；月無忘——複習鞏固。一進一守，學習就有了節奏。",
+        "zh_cn": "子夏把「好学」落到两个可检验的动作：日知所亡——每天有新收获；月无忘——复习巩固。一进一守，学习就有了节奏。",
+        "en": "Zixia reduces “love of learning” to two testable habits: daily gain — new harvest every day; monthly retention — review and consolidation. Advance and consolidate: that is the rhythm of learning."
+      },
+      "application": {
+        "zh_tw": "給自己定兩個小目標：每天學一點新的，每週複習舊的。比「我要變強」這種空話有用一百倍。",
+        "zh_cn": "给自己定两个小目标：每天学一点新的，每周复习旧的。比「我要变强」这种空话有用一百倍。",
+        "en": "Set two small goals: learn something new daily, review something old weekly. Far more useful than vague resolves like “I will improve.”"
+      }
+    },
+    {
+      "id": "wx-014",
+      "original": "子曰：「譬如為山，未成一簣，止，吾止也。譬如平地，雖覆一簣，進，吾往也。」",
+      "source": "論語·子罕第九",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "子罕篇以堆山、填地為喻，論為學進退完全取決於自己。",
+        "zh_cn": "子罕篇以堆山、填地为喻，论为学进退完全取决于自己。",
+        "en": "From Zihan — the mound and the level ground as metaphors: in learning, advance and retreat are entirely one's own."
+      },
+      "translation": {
+        "zh_tw": "好比堆一座山，只差一筐土就完成了，卻停下來，那是我自己停的；好比在平地上填土，雖然才倒下一筐，只要往前，那也是我自己在往前走。",
+        "zh_cn": "好比堆一座山，只差一筐土就完成了，却停下来，那是我自己停的；好比在平地上填土，虽然才倒下一筐，只要往前，那也是我自己在往前走。",
+        "en": "Like building a mountain: one basket short of completion, and you stop — you stopped of yourself. Like leveling ground: one basket of earth cast down, and you go on — you went on of yourself."
+      },
+      "explanation": {
+        "zh_tw": "成敗的關鍵不在起點高低、進度多少，而在「止」與「往」都由自己決定。功虧一簣是自棄，平地起土是自強——為學如此，做事亦然。",
+        "zh_cn": "成败的关键不在起点高低、进度多少，而在「止」与「往」都由自己决定。功亏一篑是自弃，平地起土是自强——为学如此，做事亦然。",
+        "en": "Success depends not on where you start or how far you have come, but on the fact that stopping and going on are your own decisions. Quitting one basket short is self-abandonment; the first basket on level ground is self-strength — in learning as in all things."
+      },
+      "application": {
+        "zh_tw": "學到一半放棄，別怪環境、怪天賦——那是自己選擇停的。重新開始也不必等「準備好」，倒下一筐土就是進步。",
+        "zh_cn": "学到一半放弃，别怪环境、怪天赋——那是自己选择停的。重新开始也不必等「准备好」，倒下一筐土就是进步。",
+        "en": "If you quit halfway, do not blame circumstance or talent — stopping was your choice. Nor must you wait to be “ready” to restart; one basket cast is already progress."
       }
     }
   ]

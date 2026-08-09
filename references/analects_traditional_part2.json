@@ -1,16 +1,24 @@
 {
   "meta": {
-    "title": "孔子語錄三語資料庫（Part 2 修身篇）",
+    "title": "孔子語錄三語資料庫（Part 2 修身篇・擴充）",
     "title_en": "Confucius Quotes Trilingual Database (Part 2: On Self-Cultivation)",
-    "version": "1.0",
-    "languages": ["zh_tw", "zh_cn", "en"],
+    "version": "1.1",
+    "languages": [
+      "zh_tw",
+      "zh_cn",
+      "en"
+    ],
     "built": "2026-08-09",
     "source": "《論語》通行本",
     "structure": "每則含原文/出處/對象/語境/譯文/詳解/現代應用，三語並列"
   },
   "category": {
     "id": "self_cultivation",
-    "name": { "zh_tw": "修身", "zh_cn": "修身", "en": "On Self-Cultivation" }
+    "name": {
+      "zh_tw": "修身",
+      "zh_cn": "修身",
+      "en": "On Self-Cultivation"
+    }
   },
   "quotes": [
     {
@@ -227,6 +235,141 @@
         "zh_tw": "理財、健康、職業規劃都適用：現在開始的每一筆儲蓄、每一次體檢、每一項技能投資，都是在為未來的自己買保險。",
         "zh_cn": "理财、健康、职业规划都适用：现在开始的每一笔储蓄、每一次体检、每一项技能投资，都是在为未来的自己买保险。",
         "en": "Applies to finance, health, and career: every saving, checkup, and skill invested now is insurance bought for your future self."
+      }
+    },
+    {
+      "id": "xs-009",
+      "original": "子曰：「君子不重則不威，學則不固。主忠信，無友不如己者，過則勿憚改。」",
+      "source": "論語·學而第一",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "學而篇論君子的自我修養：莊重、好學、忠信、擇友、改過五事。",
+        "zh_cn": "学而篇论君子的自我修养：庄重、好学、忠信、择友、改过五事。",
+        "en": "From Xue'er — five disciplines of the noble man: dignity, learning, loyalty, friendship, and amendment of faults."
+      },
+      "translation": {
+        "zh_tw": "君子不莊重就沒有威嚴，所學也不穩固。以忠信為主，不與不如自己的人交朋友，有了過錯不要怕改正。",
+        "zh_cn": "君子不庄重就没有威严，所学也不稳固。以忠信为主，不与不如自己的人交朋友，有了过错不要怕改正。",
+        "en": "If the noble man is not grave, he will not inspire awe, and his learning will not be solid. Hold loyalty and good faith as primary; do not befriend those who are not your equals; and when you have faults, do not fear to amend them."
+      },
+      "explanation": {
+        "zh_tw": "五事相連成一套修身程序：莊重是外表的定力，好學是內在的根基，忠信是待人的主軸；「無友不如己者」是說交友要能互相砥礪；最後落到改過——修身最難的是肯認錯、肯改。",
+        "zh_cn": "五事相连成一套修身程序：庄重是外表的定力，好学是内在的根基，忠信是待人的主轴；「无友不如己者」是说交友要能互相砥砺；最后落到改过——修身最难的是肯认错、肯改。",
+        "en": "The five form one program: gravity gives outer poise, learning builds inner roots, loyalty and faith anchor dealings with others; “no friends not your equals” means friends who sharpen you; and all culminates in amendment — the hardest part of self-cultivation is admitting and correcting faults."
+      },
+      "application": {
+        "zh_tw": "日常可自問五件事：我夠穩重嗎？有在學嗎？對人誠信嗎？身邊的朋友是讓我變好還是變差？犯了錯敢認、肯改嗎？",
+        "zh_cn": "日常可自问五件事：我够稳重吗？有在学吗？对人诚信吗？身边的朋友是让我变好还是变差？犯了错敢认、肯改吗？",
+        "en": "Ask yourself five things daily: Am I steady? Am I learning? Am I trustworthy? Do my friends make me better or worse? Do I own and correct my mistakes?"
+      }
+    },
+    {
+      "id": "xs-010",
+      "original": "子曰：「君子不以言舉人，不以人廢言。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇論待人處世的公正：言與人分開看。",
+        "zh_cn": "卫灵公篇论待人处世的公正：言与人分开看。",
+        "en": "From Wei Linggong — on fairness: judge words and persons separately."
+      },
+      "translation": {
+        "zh_tw": "君子不因為一個人話說得好就舉薦他，也不因為一個人品德不好就廢棄他的好話。",
+        "zh_cn": "君子不因为一个人话说得好就举荐他，也不因为一个人品德不好就废弃他的好话。",
+        "en": "The noble man does not promote a man for his fine words, nor reject a man's words for his character."
+      },
+      "explanation": {
+        "zh_tw": "兩句各防一種偏見：聽其言而信其行，會被巧言所惑；因人廢言，會錯失良言。把「話」和「人」分開評價，是成熟的判斷力。",
+        "zh_cn": "两句各防一种偏见：听其言而信其行，会被巧言所惑；因人废言，会错失良言。把「话」和「人」分开评价，是成熟的判断力。",
+        "en": "Each clause guards against one bias: trusting a man for his words lets flattery deceive you; rejecting words for the speaker's sake loses good counsel. Judging speech and speaker separately is mature discernment."
+      },
+      "application": {
+        "zh_tw": "職場上：提案好不好看內容，不看出身；得罪過你的人說的有道理，也該聽。對事不對人，對人也別只看嘴。",
+        "zh_cn": "职场上：提案好不好看内容，不看出身；得罪过你的人说的有道理，也该听。对事不对人，对人也别只看嘴。",
+        "en": "At work: judge proposals by content, not origin; even an adversary's sound advice deserves hearing. Be fair to the matter and not dazzled by the speaker."
+      }
+    },
+    {
+      "id": "xs-011",
+      "original": "子曰：「躬自厚而薄責於人，則遠怨矣。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇論責己與責人的分寸——多要求自己，少責怪別人。",
+        "zh_cn": "卫灵公篇论责己与责人的分寸——多要求自己，少责怪别人。",
+        "en": "From Wei Linggong — on the measure of blame: demand much of yourself, little of others."
+      },
+      "translation": {
+        "zh_tw": "多責備自己，少責備別人，怨恨自然就遠離了。",
+        "zh_cn": "多责备自己，少责备别人，怨恨自然就远离了。",
+        "en": "Be strict with yourself and lenient toward others — then resentment stays far away."
+      },
+      "explanation": {
+        "zh_tw": "「躬自厚」是對自己嚴，「薄責於人」是對人寬。人際衝突大半源於對人苛、對己寬；把這個比例倒過來，怨氣自然消。",
+        "zh_cn": "「躬自厚」是对自己严，「薄责于人」是对人宽。人际冲突大半源于对人苛、对己宽；把这个比例倒过来，怨气自然消。",
+        "en": "Be strict with yourself, lenient with others. Most conflict springs from demanding much of others and little of oneself; reverse that ratio and resentment dissolves."
+      },
+      "application": {
+        "zh_tw": "吵架、合作出問題時，先列自己的三條，再列對方的一條。多數時候你會發現，責己比責人更能解決問題。",
+        "zh_cn": "吵架、合作出问题时，先列自己的三条，再列对方的一条。多数时候你会发现，责己比责人更能解决问题。",
+        "en": "In disputes or failed collaborations, list three of your own faults before one of the other's. Most often you will find self-examination solves more than blame."
+      }
+    },
+    {
+      "id": "xs-012",
+      "original": "子曰：「巧言亂德。小不忍，則亂大謀。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇兩句相連：巧言惑亂德行，小事不忍會壞了大計。",
+        "zh_cn": "卫灵公篇两句相连：巧言惑乱德行，小事不忍会坏了大计。",
+        "en": "From Wei Linggong, two linked warnings: clever words corrupt virtue; what cannot be borne in small things ruins great plans."
+      },
+      "translation": {
+        "zh_tw": "花言巧語足以敗壞德行。小事情不能忍耐，就會擾亂大計畫。",
+        "zh_cn": "花言巧语足以败坏德行。小事情不能忍耐，就会扰乱大计划。",
+        "en": "Clever talk ruins virtue. If you cannot bear small provocations, you will ruin great designs."
+      },
+      "explanation": {
+        "zh_tw": "前句戒聽：巧言悅耳，最易動搖判斷；後句戒行：忍不了一時之氣，往往壞了長遠之局。一守一進，都是修身的大關口。",
+        "zh_cn": "前句戒听：巧言悦耳，最易动摇判断；后句戒行：忍不了一时之气，往往坏了长远之局。一守一进，都是修身的大关口。",
+        "en": "The first guards the ear: pleasant words most easily shake judgment. The second guards action: an unendured moment of anger often ruins a long game. Both are great gates of self-cultivation."
+      },
+      "application": {
+        "zh_tw": "談判、投資、吵架時，先問自己：這口氣值得拿大局去換嗎？忍一時不是懦弱，是給大謀留路。",
+        "zh_cn": "谈判、投资、吵架时，先问自己：这口气值得拿大局去换吗？忍一时不是懦弱，是给大谋留路。",
+        "en": "In negotiation, investment, or quarrel, ask: is this anger worth my larger goal? Bearing a moment is not cowardice; it keeps the great design open."
+      }
+    },
+    {
+      "id": "xs-013",
+      "original": "子曰：「君子疾沒世而名不稱焉。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇，孔子慨嘆君子最怕的是到死都沒有可稱道之處。",
+        "zh_cn": "卫灵公篇，孔子慨叹君子最怕的是到死都没有可称道之处。",
+        "en": "From Wei Linggong — the noble man's dread: to die without anything worthy of remembrance."
+      },
+      "translation": {
+        "zh_tw": "君子引以為憾的，是到死而名聲不被稱述。",
+        "zh_cn": "君子引以为憾的，是到死而名声不被称述。",
+        "en": "The noble man grieves to die with his name unremembered."
+      },
+      "explanation": {
+        "zh_tw": "此「名」非虛名，是實德的回響。君子不追求生前顯赫，卻怕自己一生無所立、無所成——怕的不是沒人記得，是沒有值得被記得的東西。",
+        "zh_cn": "此「名」非虚名，是实德的回响。君子不追求生前显赫，却怕自己一生无所立、无所成——怕的不是没人记得，是没有值得被记得的东西。",
+        "en": "This “name” is not fame but the echo of real virtue. The noble man seeks no glory in life, yet dreads a life in which nothing was established — not that none remember, but that there is nothing worth remembering."
+      },
+      "application": {
+        "zh_tw": "與其焦慮「別人怎麼看我」，不如問「我留下了什麼」。作品、幫助過的人、教會過誰——這些才是帶得走的「名」。",
+        "zh_cn": "与其焦虑「别人怎么看我」，不如问「我留下了什么」。作品、帮助过的人、教会过谁——这些才是带得走的「名」。",
+        "en": "Rather than fret over how others see you, ask what you leave behind: work, people helped, things taught — these are the “name” that endures."
       }
     }
   ]

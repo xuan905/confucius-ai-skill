@@ -1,16 +1,24 @@
 {
   "meta": {
-    "title": "孔子語錄三語資料庫（Part 4 為政處世篇）",
+    "title": "孔子語錄三語資料庫（Part 4 為政處世篇・擴充）",
     "title_en": "Confucius Quotes Trilingual Database (Part 4: On Government and Conduct)",
-    "version": "1.0",
-    "languages": ["zh_tw", "zh_cn", "en"],
+    "version": "1.1",
+    "languages": [
+      "zh_tw",
+      "zh_cn",
+      "en"
+    ],
     "built": "2026-08-09",
     "source": "《論語》通行本",
     "structure": "每則含原文/出處/對象/語境/譯文/詳解/現代應用，三語並列"
   },
   "category": {
     "id": "government_conduct",
-    "name": { "zh_tw": "為政處世", "zh_cn": "为政处世", "en": "On Government and Conduct" }
+    "name": {
+      "zh_tw": "為政處世",
+      "zh_cn": "为政处世",
+      "en": "On Government and Conduct"
+    }
   },
   "quotes": [
     {
@@ -281,6 +289,141 @@
         "zh_tw": "職場、社交裡的「爛好人」——誰都不得罪、什麼都點頭——短期看是人緣好，長期看是沒原則。真正的朋友是能對你說真話的人，不是只會討好的牆頭草。",
         "zh_cn": "职场、社交里的「烂好人」——谁都不得罪、什么都点头——短期看是人缘好，长期看是没原则。真正的朋友是能对你说真话的人，不是只会讨好的墙头草。",
         "en": "The pushover in work and social life — offending no one, nodding at everything — looks popular short-term, but has no principle long-term. True friends are those who can speak truth to you, not sycophants."
+      }
+    },
+    {
+      "id": "wz-011",
+      "original": "子曰：「不患人之不己知，患不知人也。」",
+      "source": "論語·學而第一",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "學而篇末章，與全書首章「人不知而不慍」遙相呼應。",
+        "zh_cn": "学而篇末章，与全书首章「人不知而不愠」遥相呼应。",
+        "en": "The closing of Xue'er, echoing the opening's “not vexed when others do not understand you.”"
+      },
+      "translation": {
+        "zh_tw": "不怕別人不了解自己，只怕自己不了解別人。",
+        "zh_cn": "不怕别人不了解自己，只怕自己不了解别人。",
+        "en": "Do not worry that others do not know you; worry that you do not know others."
+      },
+      "explanation": {
+        "zh_tw": "人常焦慮「別人怎麼看我」，孔子把方向倒過來：了解人是更難也更要緊的本事。知人才能用人、交友、避禍——把心思從「被看見」轉到「看懂人」，境界立見高下。",
+        "zh_cn": "人常焦虑「别人怎么看我」，孔子把方向倒过来：了解人是更难也更要紧的本事。知人才能用人、交友、避祸——把心思从「被看见」转到「看懂人」，境界立见高下。",
+        "en": "People fret over how others see them; Confucius reverses the direction: knowing others is harder and more important. Only by knowing people can you employ, befriend, and avoid harm — shift your mind from being seen to seeing, and the level rises at once."
+      },
+      "application": {
+        "zh_tw": "面試、談判、合作前，先做功課了解對方；與其花時間解釋自己，不如花時間讀懂別人。",
+        "zh_cn": "面试、谈判、合作前，先做功课了解对方；与其花时间解释自己，不如花时间读懂别人。",
+        "en": "Before interviews, negotiations, or partnerships, study the other side. Rather than explaining yourself, spend the time understanding them."
+      }
+    },
+    {
+      "id": "wz-012",
+      "original": "子曰：「君子泰而不驕，小人驕而不泰。」",
+      "source": "論語·子路第十三",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "子路篇論君子與小人在氣度上的分別。",
+        "zh_cn": "子路篇论君子与小人在气度上的分别。",
+        "en": "From Zilu — the difference in bearing between the noble man and the petty man."
+      },
+      "translation": {
+        "zh_tw": "君子安詳舒泰而不驕傲，小人驕傲而不安詳。",
+        "zh_cn": "君子安详舒泰而不骄傲，小人骄傲而不安详。",
+        "en": "The noble man is serene without being proud; the petty man is proud without being serene."
+      },
+      "explanation": {
+        "zh_tw": "「泰」是內心的從容篤定，不必靠外在撐場面；「驕」是內心的空虛張揚，越不安越要擺架子。看一個人的底氣，就看他安不安。",
+        "zh_cn": "「泰」是内心的从容笃定，不必靠外在撑场面；「骄」是内心的空虚张扬，越不安越要摆架子。看一个人的底气，就看他安不安。",
+        "en": "“Serene” is inner composure that needs no display; “proud” is inner emptiness that postures all the more. Judge a person's substance by whether they are at ease."
+      },
+      "application": {
+        "zh_tw": "有本事的人不張揚，張揚的人多半心虛。自己得意時問一句：我是真的從容，還是在撐面子？",
+        "zh_cn": "有本事的人不张扬，张扬的人多半心虚。自己得意时问一句：我是真的从容，还是在撑面子？",
+        "en": "The capable do not boast; the boastful are usually insecure. When elated, ask: am I truly at ease, or just keeping up appearances?"
+      }
+    },
+    {
+      "id": "wz-013",
+      "original": "子曰：「道不同，不相為謀。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇，論價值觀不同者難以共事。",
+        "zh_cn": "卫灵公篇，论价值观不同者难以共事。",
+        "en": "From Wei Linggong — those of different ways cannot plan together."
+      },
+      "translation": {
+        "zh_tw": "主張、道路不同的人，不能在一起謀劃事情。",
+        "zh_cn": "主张、道路不同的人，不能在一起谋划事情。",
+        "en": "Those who follow different ways cannot take counsel together."
+      },
+      "explanation": {
+        "zh_tw": "「道」是根本的價值取向。目標南轅北轍，再怎麼談也是空轉。此句不是教人絕交，而是教人認清：合作的前提是方向一致，否則及早止損。",
+        "zh_cn": "「道」是根本的价值取向。目标南辕北辙，再怎么谈也是空转。此句不是教人绝交，而是教人认清：合作的前提是方向一致，否则及早止损。",
+        "en": "“Way” means fundamental values. With goals pulling opposite ways, talk spins its wheels. This is not about cutting ties but about recognizing that shared direction is the precondition of cooperation — otherwise cut losses early."
+      },
+      "application": {
+        "zh_tw": "合夥創業、選擇陣營之前，先確認價值觀是否一致。談不攏不是誰的錯，是道不同——不必勉強，及早分開對雙方都好。",
+        "zh_cn": "合伙创业、选择阵营之前，先确认价值观是否一致。谈不拢不是谁的错，是道不同——不必勉强，及早分开对双方都好。",
+        "en": "Before founding a venture together or joining a camp, confirm shared values. Failure to align is nobody's fault — the ways differ. Do not force it; parting early serves both."
+      }
+    },
+    {
+      "id": "wz-014",
+      "original": "子曰：「君子矜而不爭，群而不黨。」",
+      "source": "論語·衛靈公第十五",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "衛靈公篇論君子處世的兩個分寸：莊重而不爭鬥，合群而不結黨。",
+        "zh_cn": "卫灵公篇论君子处世的兩個分寸：庄重而不争斗，合群而不结党。",
+        "en": "From Wei Linggong — two measures of the noble man's conduct: dignified yet not contentious, sociable yet not cliquish."
+      },
+      "translation": {
+        "zh_tw": "君子莊重自守而不與人爭鬥，合群共處而不結黨營私。",
+        "zh_cn": "君子庄重自守而不与人争斗，合群共处而不结党营私。",
+        "en": "The noble man is dignified but not contentious; he mixes with others but forms no faction."
+      },
+      "explanation": {
+        "zh_tw": "前句守獨立：有原則的人不屑於意氣之爭；後句守公正：能合群但不靠拉幫結派鞏固地位。一獨立一合群，拿捏得當，才是處世的中道。",
+        "zh_cn": "前句守独立：有原则的人不屑于意气之争；后句守公正：能合群但不靠拉帮结派巩固地位。一独立一合群，拿捏得当，才是处世的中道。",
+        "en": "The first guards independence: the principled disdain petty strife. The second guards fairness: join the group without using cliques to entrench position. Independence and fellowship, held in balance, are the mean of social life."
+      },
+      "application": {
+        "zh_tw": "職場上：該合作就合作，但不站隊、不搞小圈子；被捲入派系鬥爭時，保持莊重與距離，是保護自己最好的方式。",
+        "zh_cn": "职场上：该合作就合作，但不站队、不搞小圈子；被卷入派系斗争时，保持庄重与距离，是保护自己最好的方式。",
+        "en": "At work: cooperate when fitting, but take no sides and form no cliques; amid factional strife, dignity and distance protect you best."
+      }
+    },
+    {
+      "id": "wz-015",
+      "original": "子曰：「老者安之，朋友信之，少者懷之。」",
+      "source": "論語·公冶長第五",
+      "speaker": "孔子",
+      "audience": "顏淵、子路",
+      "context": {
+        "zh_tw": "顏淵、子路侍坐，各言其志；孔子說出自己的志向——讓老者安、朋友信、少年懷。",
+        "zh_cn": "颜渊、子路侍坐，各言其志；孔子说出自己的志向——让老者安、朋友信、少年怀。",
+        "en": "Seated with Yan Yuan and Zilu, each spoke of aspirations; Confucius gave his own: the aged at peace, friends trusted, the young cherished."
+      },
+      "translation": {
+        "zh_tw": "（我的志向是）讓老年人得到安養，讓朋友們信任我，讓年輕人得到關懷。",
+        "zh_cn": "（我的志向是）让老年人得到安养，让朋友们信任我，让年轻人得到关怀。",
+        "en": "“My aspiration: to comfort the aged, to be trusted by friends, to cherish the young.”"
+      },
+      "explanation": {
+        "zh_tw": "子路說願與朋友共享車馬衣裘，顏淵說願不誇己功，孔子卻把志向指向天下人——三層境界立見：為己、為友、為眾。這三句是孔子「仁者愛人」最具體的藍圖。",
+        "zh_cn": "子路说愿与朋友共享车马衣裘，颜渊说愿不夸己功，孔子却把志向指向天下人——三层境界立见：为己、为友、为众。这三句是孔子「仁者爱人」最具体的蓝图。",
+        "en": "Zilu wished to share his possessions with friends; Yan Yuan wished to claim no merit; Confucius aimed at all people — three levels at once: self, friends, the many. These three clauses are the most concrete blueprint of “love others.”"
+      },
+      "application": {
+        "zh_tw": "設計產品、管理團隊、經營家庭，都可以用這三句當驗收標準：老人是否被安頓？夥伴是否信得過我？年輕人是否被照顧到？",
+        "zh_cn": "设计产品、管理团队、经营家庭，都可以用这三句当验收标准：老人是否被安顿？伙伴是否信得过我？年轻人是否被照顾到？",
+        "en": "In product design, team management, or family life, use these three as acceptance criteria: Are the aged cared for? Do partners trust me? Are the young nurtured?"
       }
     }
   ]

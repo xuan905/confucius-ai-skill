@@ -1,16 +1,24 @@
 {
   "meta": {
-    "title": "孔子語錄三語資料庫（Part 5 弟子對話篇）",
+    "title": "孔子語錄三語資料庫（Part 5 弟子對話篇・擴充）",
     "title_en": "Confucius Quotes Trilingual Database (Part 5: Dialogues with Disciples)",
-    "version": "1.0",
-    "languages": ["zh_tw", "zh_cn", "en"],
+    "version": "1.1",
+    "languages": [
+      "zh_tw",
+      "zh_cn",
+      "en"
+    ],
     "built": "2026-08-09",
     "source": "《論語》通行本",
     "structure": "每則含原文/出處/對話雙方/語境/譯文/詳解/現代應用，三語並列"
   },
   "category": {
     "id": "disciples",
-    "name": { "zh_tw": "弟子對話", "zh_cn": "弟子对话", "en": "Dialogues with Disciples" }
+    "name": {
+      "zh_tw": "弟子對話",
+      "zh_cn": "弟子对话",
+      "en": "Dialogues with Disciples"
+    }
   },
   "quotes": [
     {
@@ -281,6 +289,141 @@
         "zh_tw": "帶人、教人、做主管：你的人品、你的行為，弟子和下屬都看在眼裡。說一套做一套，再好的課也白教；言行一致，不用多說，學生自然跟隨。",
         "zh_cn": "带人、教人、做主管：你的人品、你的行为，弟子和下属都看在眼里。说一套做一套，再好的课也白教；言行一致，不用多说，学生自然跟随。",
         "en": "In leading and teaching: your character and conduct are always on display. Preaching one thing and practicing another voids every lesson; be consistent in word and deed, and students follow without much instruction."
+      }
+    },
+    {
+      "id": "dz-011",
+      "original": "子貢問曰：「賜也何如？」子曰：「女，器也。」曰：「何器也？」曰：「瑚璉也。」",
+      "source": "論語·公冶長第五",
+      "speaker": "孔子",
+      "audience": "子貢",
+      "context": {
+        "zh_tw": "子貢（名賜）問孔子對自己的評價，孔子答以「瑚璉」——宗廟貴器。",
+        "zh_cn": "子贡（名赐）问孔子对自己的评价，孔子答以「瑚琏」——宗庙贵器。",
+        "en": "Zigong (named Ci) asked how Confucius rated him; the answer was a “hulian” — a precious vessel of the ancestral temple."
+      },
+      "translation": {
+        "zh_tw": "子貢問：「我這個人怎麼樣？」孔子說：「你是個器物。」問：「什麼器物？」說：「是宗廟裡盛黍稷的瑚璉。」",
+        "zh_cn": "子贡问：「我这个人怎么样？」孔子说：「你是个器物。」问：「什么器物？」说：「是宗庙里盛黍稷的瑚琏。」",
+        "en": "Zigong asked, “What of me?” Confucius said, “You are a vessel.” “What vessel?” “A hulian — the precious jade vessel of the ancestral temple.”"
+      },
+      "explanation": {
+        "zh_tw": "孔子先說子貢是「器」——能幹之才；但「君子不器」，器再貴也只是有特定用途的用具，暗示子貢：才能雖高，離「不器」的通達境界還差一層。既是讚許，也是點撥。",
+        "zh_cn": "孔子先说子贡是「器」——能干之才；但「君子不器」，器再贵也只是有特定用途的用具，暗示子贡：才能虽高，离「不器」的通达境界还差一层。既是赞许，也是点拨。",
+        "en": "Confucius first calls Zigong a vessel — a capable talent; yet “the noble man is no vessel”: however precious, a vessel serves but one purpose. A compliment, and at the same time a nudge: ability is high, but the all-round reach of the “non-vessel” remains a step beyond."
+      },
+      "application": {
+        "zh_tw": "被誇「你是個人才」時，想一想：我是不是只是某方面好用的「器」？除了專業，有沒有在德行、視野、待人上同時成長？",
+        "zh_cn": "被夸「你是个人才」时，想一想：我是不是只是某方面好用的「器」？除了专业，有没有在德行、视野、待人上同时成长？",
+        "en": "When praised as a “talent,” ask: am I merely a handy vessel in one respect? Besides expertise, am I also growing in character, vision, and the way I treat people?"
+      }
+    },
+    {
+      "id": "dz-012",
+      "original": "子曰：「吾與回言終日，不違，如愚。退而省其私，亦足以發，回也不愚。」",
+      "source": "論語·為政第二",
+      "speaker": "孔子",
+      "audience": null,
+      "context": {
+        "zh_tw": "孔子觀察顏回：聽講時不發問像個笨人，退下後卻能發揮所學——其實一點不笨。",
+        "zh_cn": "孔子观察颜回：听讲时不发问像个笨人，退下后却能发挥所学——其实一点不笨。",
+        "en": "Confucius on observing Yan Hui: silent in class like a simpleton, yet able to develop and apply all he heard — anything but simple."
+      },
+      "translation": {
+        "zh_tw": "我和顏回談論一整天，他從不反駁，像是個愚笨的人。等他退下，我觀察他私下的言行，卻很能發揮所學——顏回並不愚笨啊。",
+        "zh_cn": "我和颜回谈论一整天，他从不反驳，像是个愚笨的人。等他退下，我观察他私下的言行，却很能发挥所学——颜回并不愚笨啊。",
+        "en": "“I spoke with Hui all day; he never demurred, as if dull. When he withdrew and I observed his private conduct, he could indeed develop all that was taught — Hui is not dull.”"
+      },
+      "explanation": {
+        "zh_tw": "顏回的「不違」不是沒想法，是當下用心領會、回去身體力行。孔子看人不止看課堂表現，更看重課後實踐——「聽懂」不算數，「做到」才算。",
+        "zh_cn": "颜回的「不违」不是没想法，是当下用心领会、回去身体力行。孔子看人不止看课堂表现，更看重课后实践——「听懂」不算数，「做到」才算。",
+        "en": "Hui's “no demur” was not passivity but wholehearted absorption, carried into practice afterward. Confucius judged by more than classroom performance — “understanding” does not count; “doing” does."
+      },
+      "application": {
+        "zh_tw": "上課、開會時話最少的人，未必沒在聽。評估學習效果，別看他當場反應，看他事後做不做得出來。",
+        "zh_cn": "上课、开会时话最少的人，未必没在听。评估学习效果，别看他当场反应，看他事后做不做得出来。",
+        "en": "The quietest person in class or meeting is not necessarily not listening. Judge learning by what one later does, not by the immediate reaction."
+      }
+    },
+    {
+      "id": "dz-013",
+      "original": "子曰：「歲寒，然後知松柏之後凋也。」",
+      "source": "論語·子罕第九",
+      "speaker": "孔子",
+      "audience": "弟子",
+      "context": {
+        "zh_tw": "子罕篇，孔子以松柏喻節操——嚴冬方見其不凋。",
+        "zh_cn": "子罕篇，孔子以松柏喻节操——严冬方见其不凋。",
+        "en": "From Zihan — the pine and cypress as emblems of integrity: only in winter is seen that they do not wither."
+      },
+      "translation": {
+        "zh_tw": "天氣冷了，才知道松柏是最後凋零的。",
+        "zh_cn": "天气冷了，才知道松柏是最后凋零的。",
+        "en": "Only when the year turns cold do we see that the pine and cypress are the last to fade."
+      },
+      "explanation": {
+        "zh_tw": "松柏常青，但要到歲寒才顯出可貴——平時誰都綠，逆境見真章。這是孔子在亂世中對弟子也是對自己的勉勵：風霜之後，才見誰站得住。",
+        "zh_cn": "松柏常青，但要到岁寒才显出可贵——平时谁都绿，逆境见真章。这是孔子在乱世中对弟子也是对自己的勉励：风霜之后，才见谁站得住。",
+        "en": "The pine is green all year, yet its worth appears only in winter — in fair weather all is green; adversity reveals the truth. In a chaotic age this was Confucius's encouragement to his disciples and himself: after the frost, we see who still stands."
+      },
+      "application": {
+        "zh_tw": "行情好時人人都是高手，退潮時才見真本事。低谷、困境、行業寒冬——正是分辨誰是松柏的時候。",
+        "zh_cn": "行情好时人人都是高手，退潮时才见真本事。低谷、困境、行业寒冬——正是分辨谁是松柏的时候。",
+        "en": "In a rising tide everyone looks skilled; at ebb the real ones show. Downturns, hardship, an industry winter — that is when pines are told from willows."
+      }
+    },
+    {
+      "id": "dz-014",
+      "original": "子貢曰：「夫子之文章，可得而聞也；夫子之言性與天道，不可得而聞也。」",
+      "source": "論語·公冶長第五",
+      "speaker": "子貢",
+      "audience": null,
+      "context": {
+        "zh_tw": "子貢感言：老師的學問可以聽到，但關於人性與天道的深論，卻不容易聽到。",
+        "zh_cn": "子贡感言：老师的学问可以听到，但关于人性与天道的深论，却不容易听到。",
+        "en": "Zigong's reflection: the Master's learning one may hear, but his discourse on human nature and the Way of Heaven one rarely gets to hear."
+      },
+      "translation": {
+        "zh_tw": "老師的學問文章，我們可以聽得到；老師談論人性和天道，我們卻不容易聽得到。",
+        "zh_cn": "老师的学问文章，我们可以听得到；老师谈论人性和天道，我们却不容易听得到。",
+        "en": "“The Master's cultural attainments we may hear; his words on human nature and the Way of Heaven we cannot hear.”"
+      },
+      "explanation": {
+        "zh_tw": "孔子「不語怪力亂神」，很少空談抽象的天道，而把道理落實在日常的禮、義、學、行之中。子貢的感嘆正是孔門教學的特色：不談高懸的玄理，只教當下可行的工夫。",
+        "zh_cn": "孔子「不语怪力乱神」，很少空谈抽象的天道，而把道理落实在日常的礼、义、学、行之中。子贡的感叹正是孔门教学的特点：不谈高悬的玄理，只教当下可行的功夫。",
+        "en": "Confucius did not speak of prodigies or spirits and rarely discoursed on abstract Heaven; he grounded every principle in daily ritual, rightness, learning, and conduct. Zigong's remark captures the school's hallmark: no lofty metaphysics, only workable practice now."
+      },
+      "application": {
+        "zh_tw": "與人分享道理，與其空談大詞，不如落到具體做法。真正的深度不在抽象，在於能把高處的道理變成腳下的工夫。",
+        "zh_cn": "与人分享道理，与其空谈大词，不如落到具体做法。真正的深度不在抽象，在于能把高处的道理变成脚下的功夫。",
+        "en": "When sharing wisdom, prefer concrete practice to grand abstractions. Real depth lies not in the abstract but in bringing high principles down to workable steps."
+      }
+    },
+    {
+      "id": "dz-015",
+      "original": "子路問事君。子曰：「勿欺也，而犯之。」",
+      "source": "論語·憲問第十四",
+      "speaker": "孔子",
+      "audience": "子路",
+      "context": {
+        "zh_tw": "子路問如何侍奉君主，孔子答：不欺騙，但敢犯顏直諫。",
+        "zh_cn": "子路问如何侍奉君主，孔子答：不欺骗，但敢犯颜直谏。",
+        "en": "Zilu asked how to serve a ruler; the answer: do not deceive him, yet dare to oppose him to his face."
+      },
+      "translation": {
+        "zh_tw": "子路問怎樣侍奉君主。孔子說：「不要欺騙他，但可以犯顏直諫。」",
+        "zh_cn": "子路问怎样侍奉君主。孔子说：「不要欺骗他，但可以犯颜直谏。」",
+        "en": "Zilu asked about serving a ruler. Confucius said, “Do not deceive him, but stand up to him.”"
+      },
+      "explanation": {
+        "zh_tw": "兩個字概括事上之道：「勿欺」是忠——絕不說謊迎合；「犯之」是直——該說的話敢說，不怕得罪。媚上與瞞上都是小人，忠而能犯顏，才是難得的臣道。",
+        "zh_cn": "两个字概括事上之道：「勿欺」是忠——绝不说谎迎合；「犯之」是直——该说的话敢说，不怕得罪。媚上与瞒上都是小人，忠而能犯颜，才是难得的臣道。",
+        "en": "Two words sum up serving superiors: “do not deceive” — loyalty, never flattering lies; “stand up to him” — uprightness, daring to speak truth at cost. To fawn and to conceal are both petty; loyalty that dares to oppose is the rare excellence."
+      },
+      "application": {
+        "zh_tw": "對上司、對客戶：不欺騙是底線，敢說逆耳真話是價值。一味順從是幫對方犯錯，直言相諫才是真負責。",
+        "zh_cn": "对上司、对客户：不欺骗是底线，敢说逆耳真话是价值。一味顺从是帮对方犯错，直言相谏才是真负责。",
+        "en": "With bosses and clients: never deceive — that is the floor; speak unwelcome truths — that is the value. Obsequiousness abets their errors; plain counsel is true responsibility."
       }
     }
   ]
