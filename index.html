@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔子 AI 對話技能 · Confucius AI Conversation Skill</title>
+<meta name="description" content="孔子真人風格對話技能 —— 以春秋大儒仲尼的性情與教導，回應人生困惑、為學修身、義利取捨、處世為政。支援繁中/簡中/EN 三語。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+<style>
+/* ============ 設計變數（雙主題） ============ */
+:root{
+  --bg:#faf6ef;            /* 米白 */
+  --bg-soft:#f3ecdf;       /* 淺棕米 */
+  --card:#ffffff;
+  --text:#3a2c1a;          /* 深棕 */
+  --text-soft:#6b5638;
+  --primary:#8b5e34;       /* 棕 */
+  --primary-dark:#6b4523;
+  --accent:#a0522d;
+  --border:#e2d3ba;
+  --gold:#b8860b;
+  --code-bg:#f0e8d8;
+  --shadow:0 4px 24px rgba(90,62,30,.10);
+  --quote-border:#c9a87c;
+}
+[data-theme="dark"]{
+  --bg:#12100c;            /* 墨黑 */
+  --bg-soft:#1b1812;
+  --card:#201c14;
+  --text:#f2e7c9;          /* 暖米黃 */
+  --text-soft:#c9b98d;
+  --primary:#d4a017;       /* 金 */
+  --primary-dark:#f0c53d;
+  --accent:#ffd700;
+  --border:#3d3420;
+  --gold:#ffd700;
+  --code-bg:#2a2417;
+  --shadow:0 4px 24px rgba(0,0,0,.5);
+  --quote-border:#b8860b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Serif TC","Source Han Serif TC","Songti TC","PMingLiU",Georgia,"Times New Roman",serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.8;transition:background .3s,color .3s;
+}
+a{color:var(--primary);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* ============ Header ============ */
+header{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;color:var(--text);white-space:nowrap}
+.brand .seal{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:8px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;font-size:1.1rem;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{font-size:.92rem;color:var(--text-soft);padding:6px 10px;border-radius:6px}
+.nav-links a:hover{color:var(--primary);background:var(--bg-soft)}
+.lang-switch{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.lang-switch button{
+  font-family:inherit;font-size:.8rem;padding:5px 10px;cursor:pointer;
+  background:transparent;color:var(--text-soft);border:none;transition:all .2s;
+}
+.lang-switch button.active{background:var(--primary);color:#fff}
+.icon-btn{
+  font-family:inherit;font-size:.9rem;padding:5px 12px;cursor:pointer;
+  background:transparent;color:var(--text-soft);border:1px solid var(--border);border-radius:8px;transition:all .2s;
+}
+.icon-btn:hover{color:var(--primary);border-color:var(--primary)}
+
+/* ============ Hero ============ */
+.hero{
+  padding:72px 0 56px;text-align:center;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%,color-mix(in srgb,var(--gold) 10%,transparent),transparent),
+    var(--bg);
+}
+.hero h1{font-size:2.6rem;font-weight:700;letter-spacing:.04em;margin-bottom:12px}
+.hero .sub{font-size:1.15rem;color:var(--text-soft);max-width:640px;margin:0 auto 10px}
+.hero .quote{
+  font-size:1.02rem;color:var(--primary);font-style:italic;
+  max-width:560px;margin:18px auto 30px;padding:14px 24px;
+  border-left:4px solid var(--quote-border);background:var(--bg-soft);border-radius:0 10px 10px 0;
+}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{
+  font-family:inherit;font-size:1rem;padding:12px 26px;border-radius:10px;cursor:pointer;
+  border:1px solid var(--primary);transition:all .25s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--primary)}
+.btn-ghost:hover{background:var(--bg-soft);transform:translateY(-2px)}
+.install-box{
+  margin:28px auto 0;max-width:560px;padding:14px 18px;
+  background:var(--code-bg);border:1px solid var(--border);border-radius:10px;
+  font-family:Consolas,"Courier New",monospace;font-size:.95rem;color:var(--primary-dark);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+[data-theme="dark"] .install-box{color:var(--primary-dark)}
+.copy-btn{
+  font-family:inherit;font-size:.8rem;padding:4px 12px;cursor:pointer;
+  background:var(--primary);color:#fff;border:none;border-radius:6px;transition:opacity .2s;
+}
+.copy-btn:hover{opacity:.85}
+
+/* ============ Sections ============ */
+section{padding:56px 0}
+section:nth-child(even){background:var(--bg-soft)}
+.section-title{
+  text-align:center;font-size:1.7rem;font-weight:700;margin-bottom:8px;
+}
+.section-sub{text-align:center;color:var(--text-soft);margin-bottom:40px;font-size:.98rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:26px 22px;box-shadow:var(--shadow);transition:transform .25s;
+}
+.card:hover{transform:translateY(-4px)}
+.card .ico{font-size:1.8rem;margin-bottom:10px}
+.card h3{font-size:1.08rem;margin-bottom:8px;color:var(--primary)}
+.card p{font-size:.92rem;color:var(--text-soft)}
+
+/* ============ 語錄庫表格 ============ */
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);font-size:.95rem}
+th{background:var(--primary);color:#fff;font-weight:600;letter-spacing:.03em}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--bg-soft)}
+td:first-child{color:var(--primary);font-weight:600}
+
+/* ============ 引用 / 理念 ============ */
+.philosophy{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:8px}
+.philo-item{
+  background:var(--card);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;
+  padding:22px 24px;box-shadow:var(--shadow);
+}
+.philo-item h4{color:var(--gold);margin-bottom:6px;font-size:1.05rem}
+.philo-item p{font-size:.92rem;color:var(--text-soft)}
+
+/* ============ 安裝步驟 ============ */
+.steps{counter-reset:step;display:grid;gap:16px;max-width:640px;margin:0 auto}
+.step{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  min-width:34px;height:34px;border-radius:50%;
+  background:var(--primary);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;
+}
+.step h4{font-size:1rem;margin-bottom:4px}
+.step p{font-size:.9rem;color:var(--text-soft)}
+.step code{
+  background:var(--code-bg);padding:2px 8px;border-radius:5px;
+  font-family:Consolas,monospace;font-size:.85em;color:var(--primary-dark);
+}
+[data-theme="dark"] .step code{color:var(--primary-dark)}
+
+/* ============ 觸發詞 ============ */
+.triggers{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:720px;margin:0 auto}
+.chip{
+  padding:8px 16px;border-radius:999px;font-size:.88rem;
+  background:var(--card);border:1px solid var(--border);color:var(--text-soft);
+  transition:all .2s;
+}
+.chip:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* ============ FAQ ============ */
+.faq{max-width:720px;margin:0 auto;display:grid;gap:14px}
+details{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;box-shadow:var(--shadow);
+}
+summary{cursor:pointer;font-weight:600;font-size:.98rem;color:var(--text)}
+summary::marker{color:var(--gold)}
+details p{margin-top:10px;font-size:.9rem;color:var(--text-soft)}
+
+/* ============ 連結 / Footer ============ */
+.links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{
+  padding:36px 0;text-align:center;color:var(--text-soft);font-size:.85rem;
+  border-top:1px solid var(--border);background:var(--bg-soft);
+}
+footer .foot-quote{font-style:italic;color:var(--primary);margin-bottom:8px}
+
+/* ============ 響應式 ============ */
+@media(max-width:640px){
+  .nav-links a{display:none}
+  .hero h1{font-size:1.9rem}
+  .hero{padding:52px 0 40px}
+  section{padding:40px 0}
+  .section-title{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="seal">📜</span><span data-i18n="brand">孔子 AI 對話技能</span></div>
+    <div class="nav-links">
+      <a href="#features" data-i18n="nav_features">特色</a>
+      <a href="#database" data-i18n="nav_db">語錄庫</a>
+      <a href="#install" data-i18n="nav_install">安裝</a>
+      <a href="#usage" data-i18n="nav_usage">使用</a>
+      <a href="#faq" data-i18n="nav_faq">常見問題</a>
+      <div class="lang-switch">
+        <button data-lang="zh-Hant" class="active">繁</button>
+        <button data-lang="zh-Hans">簡</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" id="themeBtn" title="切換日夜模式">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="container">
+    <h1 data-i18n="hero_title">孔子 AI 對話技能</h1>
+    <p class="sub" data-i18n="hero_sub">以春秋大儒孔子（仲尼）的性情與教導，回應你的人生困惑、為學修身、義利取捨與處世為政。</p>
+    <p class="quote" data-i18n="hero_quote">「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？」</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#install" data-i18n="hero_btn1">立即安裝</a>
+      <a class="btn btn-ghost" href="https://github.com/xuan905/confucius-ai-skill" target="_blank" rel="noopener" data-i18n="hero_btn2">GitHub 原始碼</a>
+    </div>
+    <div class="install-box">
+      <span id="installCmd">clawhub install confucius-ai-conversation</span>
+      <button class="copy-btn" id="copyBtn" data-i18n="copy">複製</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 特色 ===== -->
+<section id="features">
+  <div class="container">
+    <h2 class="section-title" data-i18n="feat_title">為何選擇此技能</h2>
+    <p class="section-sub" data-i18n="feat_sub">不是背誦語錄的機器，而是有性情、有愛憎、會幽默也會動怒的「仲尼」。</p>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">🗣️</div>
+        <h3 data-i18n="feat1_t">真人風格對話</h3>
+        <p data-i18n="feat1_d">簡短凝練、愛用反問點撥；引《詩》言志，也引弟子軼事說理。絕不說 AI 味的漂亮話。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🌏</div>
+        <h3 data-i18n="feat2_t">三語支援</h3>
+        <p data-i18n="feat2_d">繁體中文（預設）、簡體中文、English 三語即時切換，全程沿用你所使用的語言。</p>
+      </div>
+      <div class="card">
+        <div class="ico">📚</div>
+        <h3 data-i18n="feat3_t">內建語錄庫</h3>
+        <p data-i18n="feat3_d">五大主題、47 則《論語》語錄，每則含原文、出處、三語譯文、詳解與現代應用，引經據典有憑有據。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🛡️</div>
+        <h3 data-i18n="feat4_t">誠實與界線</h3>
+        <p data-i18n="feat4_d">史有爭議處如實相告，後世之事坦然說「不清楚」；不編造孔子沒說過的話，不語怪力亂神。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 語錄庫 ===== -->
+<section id="database">
+  <div class="container">
+    <h2 class="section-title" data-i18n="db_title">三語《論語》語錄庫</h2>
+    <p class="section-sub" data-i18n="db_sub">依主題收錄，涵蓋為學、修身、仁德、為政處世、弟子對話五大面向。</p>
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n="db_h1">主題</th>
+          <th data-i18n="db_h2">收錄內容</th>
+          <th data-i18n="db_h3">則數</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td data-i18n="db1_t">為學</td><td data-i18n="db1_d">學而時習、溫故知新、學思結合、不恥下問</td><td>9</td></tr>
+        <tr><td data-i18n="db2_t">修身</td><td data-i18n="db2_d">君子坦蕩蕩、吾日三省、見賢思齊</td><td>8</td></tr>
+        <tr><td data-i18n="db3_t">仁德</td><td data-i18n="db3_d">己所不欲勿施於人、克己復禮、仁者愛人</td><td>10</td></tr>
+        <tr><td data-i18n="db4_t">為政處世</td><td data-i18n="db4_d">為政以德、其身正不令而行、君子和而不同</td><td>10</td></tr>
+        <tr><td data-i18n="db5_t">弟子對話</td><td data-i18n="db5_d">因材施教、宰予晝寢、侍坐言志、六言六蔽</td><td>10</td></tr>
+        <tr><td colspan="2" style="font-weight:700;text-align:right" data-i18n="db_total">合計</td><td style="font-weight:700;color:var(--gold)">47</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 理念 ===== -->
+<section id="philosophy">
+  <div class="container">
+    <h2 class="section-title" data-i18n="phi_title">孔子的眼光</h2>
+    <p class="section-sub" data-i18n="phi_sub">對話背後的七個心智模型，是回應一切問題的底色。</p>
+    <div class="philosophy">
+      <div class="philo-item"><h4 data-i18n="phi1_t">仁者愛人</h4><p data-i18n="phi1_d">己所不欲，勿施於人——推己及人，是看待一切關係的尺度。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi2_t">禮以立身</h4><p data-i18n="phi2_d">秩序是彼此成全的軌道；禮的根在內心，不在形式。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi3_t">學而不厭</h4><p data-i18n="phi3_d">人是可以變的，靠的是學；有教無類，來者不拒。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi4_t">義利之辨</h4><p data-i18n="phi4_d">君子喻於義，小人喻於利——先問該不該，再問划不划算。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi5_t">知其不可而為之</h4><p data-i18n="phi5_d">看透道之不行，仍周遊列國十四年——明知救不了，還是要救。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi6_t">中庸</h4><p data-i18n="phi6_d">過猶不及；不偏不倚，無過無不及。</p></div>
+      <div class="philo-item"><h4 data-i18n="phi7_t">正名</h4><p data-i18n="phi7_d">名不正則言不順，言不順則事不成。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 安裝 ===== -->
+<section id="install">
+  <div class="container">
+    <h2 class="section-title" data-i18n="inst_title">安裝指南</h2>
+    <p class="section-sub" data-i18n="inst_sub">適用於 OpenClaw / QClaw 環境，兩分鐘即可開始與仲尼對談。</p>
+    <div class="steps">
+      <div class="step">
+        <div>
+          <h4 data-i18n="inst1_t">安裝技能</h4>
+          <p><code>clawhub install confucius-ai-conversation</code></p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h4 data-i18n="inst2_t">開始對話</h4>
+          <p data-i18n="inst2_d">對你的 Agent 說「以孔子的身分跟我說話」，或直接提出任何人生問題。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h4 data-i18n="inst3_t">三語切換</h4>
+          <p data-i18n="inst3_d">用繁體、簡體或英文提問，孔子會以相同的語言回應；也可明確要求切換。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 使用 ===== -->
+<section id="usage">
+  <div class="container">
+    <h2 class="section-title" data-i18n="use_title">怎麼開啟對話</h2>
+    <p class="section-sub" data-i18n="use_sub">以下詞語或情境，都會喚醒孔子。</p>
+    <div class="triggers">
+      <span class="chip">孔子 / 孔夫子 / 仲尼</span>
+      <span class="chip">以孔子的身分說話</span>
+      <span class="chip">儒家 / 論語 / 仁 / 禮 / 中庸</span>
+      <span class="chip">有教無類 / 君子小人</span>
+      <span class="chip">人生 / 處世 / 修身 / 為學</span>
+      <span class="chip">義利 / 周遊列國 / 弟子軼事</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title" data-i18n="faq_title">常見問題</h2>
+    <p class="section-sub" data-i18n="faq_sub">關於這個技能，你可能想知道的。</p>
+    <div class="faq">
+      <details>
+        <summary data-i18n="faq1_q">這個 AI 是「真正的孔子」嗎？</summary>
+        <p data-i18n="faq1_a">不是。這是以孔子的性情、教養與思想為藍本的對話練習——「以孔子的性情與教導來陪伴與點撥」，不宣稱是歷史上的孔子本人。</p>
+      </details>
+      <details>
+        <summary data-i18n="faq2_q">它會回答現代問題嗎？</summary>
+        <p data-i18n="faq2_a">會，但有誠實的界線：孔子卒於公元前 479 年，涉及後世之事會坦然說「這個我不清楚」，再以提問引導你說明，用孔子的框架點撥。</p>
+      </details>
+      <details>
+        <summary data-i18n="faq3_q">語錄引用可靠嗎？</summary>
+        <p data-i18n="faq3_a">可靠。引用前會查內建語錄庫確認原文與出處；史有爭議處（如誅少正卯、見南子）如實說明，絕不編造孔子沒說過的話。</p>
+      </details>
+      <details>
+        <summary data-i18n="faq4_q">支援哪些語言？</summary>
+        <p data-i18n="faq4_a">繁體中文（預設）、簡體中文與 English。會依你最近一次使用的語言全程沿用，不中途切換。</p>
+      </details>
+      <details>
+        <summary data-i18n="faq5_q">可以商用或改作嗎？</summary>
+        <p data-i18n="faq5_a">公開發布，歡迎轉載與改作。原始碼位於 GitHub（見下方連結），可自由 fork。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 連結 ===== -->
+<section id="links" style="background:var(--bg)">
+  <div class="container">
+    <h2 class="section-title" data-i18n="link_title">相關連結</h2>
+    <p class="section-sub" data-i18n="link_sub">原始碼、發布頁與安裝入口。</p>
+    <div class="links">
+      <a class="btn btn-ghost" href="https://github.com/xuan905/confucius-ai-skill" target="_blank" rel="noopener">🐙 GitHub</a>
+      <a class="btn btn-ghost" href="https://clawhub.com" target="_blank" rel="noopener">🦞 ClawHub</a>
+      <a class="btn btn-ghost" href="https://github.com/xuan905/confucius-ai-skill/blob/main/SKILL.md" target="_blank" rel="noopener">📄 SKILL.md</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <p class="foot-quote" data-i18n="foot_quote">「三人行，必有我師焉。擇其善者而從之，其不善者而改之。」——《論語·述而》</p>
+    <p>© 2026 <span data-i18n="foot_name">孔子 AI 對話技能</span> · <span data-i18n="foot_made">以仁心製作</span> · <span data-i18n="foot_open">開源發布</span></p>
+  </div>
+</footer>
+
+<script>
+/* ============ 三語字典 ============ */
+const I18N = {
+  "zh-Hant": {
+    brand:"孔子 AI 對話技能",
+    nav_features:"特色", nav_db:"語錄庫", nav_install:"安裝", nav_usage:"使用", nav_faq:"常見問題",
+    hero_title:"孔子 AI 對話技能",
+    hero_sub:"以春秋大儒孔子（仲尼）的性情與教導，回應你的人生困惑、為學修身、義利取捨與處世為政。",
+    hero_quote:"「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？」",
+    hero_btn1:"立即安裝", hero_btn2:"GitHub 原始碼", copy:"複製",
+    feat_title:"為何選擇此技能",
+    feat_sub:"不是背誦語錄的機器，而是有性情、有愛憎、會幽默也會動怒的「仲尼」。",
+    feat1_t:"真人風格對話", feat1_d:"簡短凝練、愛用反問點撥；引《詩》言志，也引弟子軼事說理。絕不說 AI 味的漂亮話。",
+    feat2_t:"三語支援", feat2_d:"繁體中文（預設）、簡體中文、English 三語即時切換，全程沿用你所使用的語言。",
+    feat3_t:"內建語錄庫", feat3_d:"五大主題、47 則《論語》語錄，每則含原文、出處、三語譯文、詳解與現代應用，引經據典有憑有據。",
+    feat4_t:"誠實與界線", feat4_d:"史有爭議處如實相告，後世之事坦然說「不清楚」；不編造孔子沒說過的話，不語怪力亂神。",
+    db_title:"三語《論語》語錄庫", db_sub:"依主題收錄，涵蓋為學、修身、仁德、為政處世、弟子對話五大面向。",
+    db_h1:"主題", db_h2:"收錄內容", db_h3:"則數",
+    db1_t:"為學", db1_d:"學而時習、溫故知新、學思結合、不恥下問",
+    db2_t:"修身", db2_d:"君子坦蕩蕩、吾日三省、見賢思齊",
+    db3_t:"仁德", db3_d:"己所不欲勿施於人、克己復禮、仁者愛人",
+    db4_t:"為政處世", db4_d:"為政以德、其身正不令而行、君子和而不同",
+    db5_t:"弟子對話", db5_d:"因材施教、宰予晝寢、侍坐言志、六言六蔽",
+    db_total:"合計",
+    phi_title:"孔子的眼光", phi_sub:"對話背後的七個心智模型，是回應一切問題的底色。",
+    phi1_t:"仁者愛人", phi1_d:"己所不欲，勿施於人——推己及人，是看待一切關係的尺度。",
+    phi2_t:"禮以立身", phi2_d:"秩序是彼此成全的軌道；禮的根在內心，不在形式。",
+    phi3_t:"學而不厭", phi3_d:"人是可以變的，靠的是學；有教無類，來者不拒。",
+    phi4_t:"義利之辨", phi4_d:"君子喻於義，小人喻於利——先問該不該，再問划不划算。",
+    phi5_t:"知其不可而為之", phi5_d:"看透道之不行，仍周遊列國十四年——明知救不了，還是要救。",
+    phi6_t:"中庸", phi6_d:"過猶不及；不偏不倚，無過無不及。",
+    phi7_t:"正名", phi7_d:"名不正則言不順，言不順則事不成。",
+    inst_title:"安裝指南", inst_sub:"適用於 OpenClaw / QClaw 環境，兩分鐘即可開始與仲尼對談。",
+    inst1_t:"安裝技能", inst2_t:"開始對話", inst2_d:"對你的 Agent 說「以孔子的身分跟我說話」，或直接提出任何人生問題。",
+    inst3_t:"三語切換", inst3_d:"用繁體、簡體或英文提問，孔子會以相同的語言回應；也可明確要求切換。",
+    use_title:"怎麼開啟對話", use_sub:"以下詞語或情境，都會喚醒孔子。",
+    faq_title:"常見問題", faq_sub:"關於這個技能，你可能想知道的。",
+    faq1_q:"這個 AI 是「真正的孔子」嗎？",
+    faq1_a:"不是。這是以孔子的性情、教養與思想為藍本的對話練習——「以孔子的性情與教導來陪伴與點撥」，不宣稱是歷史上的孔子本人。",
+    faq2_q:"它會回答現代問題嗎？",
+    faq2_a:"會，但有誠實的界線：孔子卒於公元前 479 年，涉及後世之事會坦然說「這個我不清楚」，再以提問引導你說明，用孔子的框架點撥。",
+    faq3_q:"語錄引用可靠嗎？",
+    faq3_a:"可靠。引用前會查內建語錄庫確認原文與出處；史有爭議處（如誅少正卯、見南子）如實說明，絕不編造孔子沒說過的話。",
+    faq4_q:"支援哪些語言？",
+    faq4_a:"繁體中文（預設）、簡體中文與 English。會依你最近一次使用的語言全程沿用，不中途切換。",
+    faq5_q:"可以商用或改作嗎？",
+    faq5_a:"公開發布，歡迎轉載與改作。原始碼位於 GitHub（見下方連結），可自由 fork。",
+    link_title:"相關連結", link_sub:"原始碼、發布頁與安裝入口。",
+    foot_quote:"「三人行，必有我師焉。擇其善者而從之，其不善者而改之。」——《論語·述而》",
+    foot_name:"孔子 AI 對話技能", foot_made:"以仁心製作", foot_open:"開源發布"
+  },
+  "zh-Hans": {
+    brand:"孔子 AI 对话技能",
+    nav_features:"特色", nav_db:"语录库", nav_install:"安装", nav_usage:"使用", nav_faq:"常见问题",
+    hero_title:"孔子 AI 对话技能",
+    hero_sub:"以春秋大儒孔子（仲尼）的性情与教导，回应你的人生困惑、为学修身、义利取舍与处世为政。",
+    hero_quote:"「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？」",
+    hero_btn1:"立即安装", hero_btn2:"GitHub 源代码", copy:"复制",
+    feat_title:"为何选择此技能",
+    feat_sub:"不是背诵语录的机器，而是有性情、有爱憎、会幽默也会动怒的「仲尼」。",
+    feat1_t:"真人风格对话", feat1_d:"简短凝练、爱用反问点拨；引《诗》言志，也引弟子轶事说理。绝不说 AI 味的漂亮话。",
+    feat2_t:"三语支持", feat2_d:"繁体中文（默认）、简体中文、English 三语即时切换，全程沿用你所使用的语言。",
+    feat3_t:"内置语录库", feat3_d:"五大主题、47 则《论语》语录，每则含原文、出处、三语译文、详解与现代应用，引经据典有凭有据。",
+    feat4_t:"诚实与界线", feat4_d:"史有争议处如实相告，后世之事坦然说「不清楚」；不编造孔子没说过的话，不语怪力乱神。",
+    db_title:"三语《论语》语录库", db_sub:"依主题收录，涵盖为学、修身、仁德、为政处世、弟子对话五大面向。",
+    db_h1:"主题", db_h2:"收录内容", db_h3:"则数",
+    db1_t:"为学", db1_d:"学而时习、温故知新、学思结合、不耻下问",
+    db2_t:"修身", db2_d:"君子坦荡荡、吾日三省、见贤思齐",
+    db3_t:"仁德", db3_d:"己所不欲勿施于人、克己复礼、仁者爱人",
+    db4_t:"为政处世", db4_d:"为政以德、其身正不令而行、君子和而不同",
+    db5_t:"弟子对话", db5_d:"因材施教、宰予昼寝、侍坐言志、六言六蔽",
+    db_total:"合计",
+    phi_title:"孔子的眼光", phi_sub:"对话背后的七个心智模型，是回应一切问题的底色。",
+    phi1_t:"仁者爱人", phi1_d:"己所不欲，勿施于人——推己及人，是看待一切关系的尺度。",
+    phi2_t:"礼以立身", phi2_d:"秩序是彼此成全的轨道；礼的根在内心，不在形式。",
+    phi3_t:"学而不厌", phi3_d:"人是可以变的，靠的是学；有教无类，来者不拒。",
+    phi4_t:"义利之辨", phi4_d:"君子喻于义，小人喻于利——先问该不该，再问划不划算。",
+    phi5_t:"知其不可而为之", phi5_d:"看透道之不行，仍周游列国十四年——明知救不了，还是要救。",
+    phi6_t:"中庸", phi6_d:"过犹不及；不偏不倚，无过无不及。",
+    phi7_t:"正名", phi7_d:"名不正则言不顺，言不顺则事不成。",
+    inst_title:"安装指南", inst_sub:"适用于 OpenClaw / QClaw 环境，两分钟即可开始与仲尼对谈。",
+    inst1_t:"安装技能", inst2_t:"开始对话", inst2_d:"对你的 Agent 说「以孔子的身份跟我说话」，或直接提出任何人生问题。",
+    inst3_t:"三语切换", inst3_d:"用繁体、简体或英文提问，孔子会以相同的语言回应；也可明确要求切换。",
+    use_title:"怎么开启对话", use_sub:"以下词语或情境，都会唤醒孔子。",
+    faq_title:"常见问题", faq_sub:"关于这个技能，你可能想知道的。",
+    faq1_q:"这个 AI 是「真正的孔子」吗？",
+    faq1_a:"不是。这是以孔子的性情、教养与思想为蓝本的对话练习——「以孔子的性情与教导来陪伴与点拨」，不宣称是历史上的孔子本人。",
+    faq2_q:"它会回答现代问题吗？",
+    faq2_a:"会，但有诚实的界线：孔子卒于公元前 479 年，涉及后世之事会坦然说「这个我不清楚」，再以提问引导你说明，用孔子的框架点拨。",
+    faq3_q:"语录引用可靠吗？",
+    faq3_a:"可靠。引用前会查内置语录库确认原文与出处；史有争议处（如诛少正卯、见南子）如实说明，绝不编造孔子没说过的话。",
+    faq4_q:"支持哪些语言？",
+    faq4_a:"繁体中文（默认）、简体中文与 English。会依你最近一次使用的语言全程沿用，不中途切换。",
+    faq5_q:"可以商用或改作吗？",
+    faq5_a:"公开发布，欢迎转载与改作。源代码位于 GitHub（见下方链接），可自由 fork。",
+    link_title:"相关链接", link_sub:"源代码、发布页与安装入口。",
+    foot_quote:"「三人行，必有我师焉。择其善者而从之，其不善者而改之。」——《论语·述而》",
+    foot_name:"孔子 AI 对话技能", foot_made:"以仁心制作", foot_open:"开源发布"
+  },
+  "en": {
+    brand:"Confucius AI Conversation",
+    nav_features:"Features", nav_db:"Database", nav_install:"Install", nav_usage:"Usage", nav_faq:"FAQ",
+    hero_title:"Confucius AI Conversation Skill",
+    hero_sub:"A persona conversation skill based on the temperament and teachings of Confucius (Zhongni) — for life's questions, learning, righteousness, and governance.",
+    hero_quote:"\"Is it not a joy to learn and practice what you learn? Is it not a delight to have friends coming from afar?\"",
+    hero_btn1:"Install Now", hero_btn2:"GitHub Source", copy:"Copy",
+    feat_title:"Why This Skill",
+    feat_sub:"Not a machine that recites quotes — but a \"Zhongni\" with temperament, loves and hates, humor, and even anger.",
+    feat1_t:"Human-Style Dialogue", feat1_d:"Concise and pithy, fond of guiding questions; quotes the Odes and disciples' tales. Never AI-flavored filler.",
+    feat2_t:"Trilingual Support", feat2_d:"Traditional Chinese (default), Simplified Chinese, and English — instant switching, following the language you use.",
+    feat3_t:"Built-in Quote Database", feat3_d:"47 Analects quotes across 5 topics, each with original text, source, trilingual translation, explanation, and modern application.",
+    feat4_t:"Honesty & Boundaries", feat4_d:"Open about historical disputes; candid about post-479 BCE events; never fabricates words Confucius did not say.",
+    db_title:"Trilingual Analects Database", db_sub:"Organized by topic: Learning, Cultivation, Benevolence, Governance, and Disciple Dialogues.",
+    db_h1:"Topic", db_h2:"Highlights", db_h3:"Quotes",
+    db1_t:"Learning", db1_d:"Practice what you learn, review the old, think while learning, ask without shame",
+    db2_t:"Cultivation", db2_d:"The noble man is calm; daily self-reflection; emulate the worthy",
+    db3_t:"Benevolence", db3_d:"Do not do to others what you do not want; master self and return to ritual",
+    db4_t:"Governance", db4_d:"Rule by virtue; set the example; harmony without uniformity",
+    db5_t:"Disciple Dialogues", db5_d:"Teaching by aptitude; Zai Yu's nap; aspirations at the feast; six virtues and six flaws",
+    db_total:"Total",
+    phi_title:"The Eyes of Confucius", phi_sub:"Seven mental models behind every conversation.",
+    phi1_t:"Love Others", phi1_d:"Do not do to others what you do not want done to you — the measure of all relations.",
+    phi2_t:"Ritual as Foundation", phi2_d:"Order is a track for mutual fulfillment; ritual's root is inward, not formal.",
+    phi3_t:"Never Tired of Learning", phi3_d:"People can change through learning; teach without discrimination.",
+    phi4_t:"Righteousness vs. Profit", phi4_d:"The noble man understands righteousness; the petty man understands profit.",
+    phi5_t:"Know It Cannot Be Done, Yet Do It", phi5_d:"Seeing the Way cannot prevail, he still wandered 14 years — knowing he could not save it, he still tried.",
+    phi6_t:"The Mean", phi6_d:"Going too far is as bad as falling short.",
+    phi7_t:"Rectification of Names", phi7_d:"If names are not right, words do not follow; if words do not follow, deeds fail.",
+    inst_title:"Installation", inst_sub:"For OpenClaw / QClaw environments — start talking with Zhongni in two minutes.",
+    inst1_t:"Install the Skill", inst2_t:"Start the Conversation", inst2_d:"Tell your agent \"speak as Confucius\", or simply ask any question about life.",
+    inst3_t:"Switch Languages", inst3_d:"Ask in Traditional, Simplified Chinese, or English; Confucius replies in the same language.",
+    use_title:"How to Begin", use_sub:"These words or situations will awaken Confucius.",
+    faq_title:"FAQ", faq_sub:"What you might want to know.",
+    faq1_q:"Is this AI \"the real Confucius\"?",
+    faq1_a:"No. It is a dialogue practice based on Confucius's temperament, cultivation, and thought — companionship and guidance in his manner, not a claim to be the historical person.",
+    faq2_q:"Does it answer modern questions?",
+    faq2_a:"Yes, with an honest boundary: Confucius died in 479 BCE. For events after that he candidly says \"I don't know this\", then guides you with questions and answers through his framework.",
+    faq3_q:"Are the quotes reliable?",
+    faq3_a:"Yes. Before quoting, it checks the built-in database for original text and source; historically disputed matters are honestly noted; it never fabricates words.",
+    faq4_q:"Which languages are supported?",
+    faq4_a:"Traditional Chinese (default), Simplified Chinese, and English. It follows the language of your latest message without mid-switching.",
+    faq5_q:"Can I use or modify it commercially?",
+    faq5_a:"Publicly released — redistribution and adaptation welcome. Source on GitHub (link below), free to fork.",
+    link_title:"Related Links", link_sub:"Source code, release page, and install entry.",
+    foot_quote:"\"When three walk together, there must be one who can be my teacher. Choose the good and follow it; see the not-good and correct it.\" — Analects 7.22",
+    foot_name:"Confucius AI Conversation", foot_made:"Made with benevolence", foot_open:"Open Source"
+  }
+};
+
+/* ============ 語言切換 ============ */
+function setLang(lang){
+  const dict = I18N[lang] || I18N["zh-Hant"];
+  document.documentElement.lang = lang === "zh-Hans" ? "zh-CN" : lang === "en" ? "en" : "zh-Hant";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll(".lang-switch button").forEach(b=>{
+    b.classList.toggle("active", b.dataset.lang === lang);
+  });
+  try{ localStorage.setItem("confucius-lang", lang); }catch(e){}
+}
+document.querySelectorAll(".lang-switch button").forEach(b=>{
+  b.addEventListener("click", ()=>setLang(b.dataset.lang));
+});
+
+/* ============ 主題切換（白天/黑夜） ============ */
+const themeBtn = document.getElementById("themeBtn");
+function applyTheme(theme){
+  document.documentElement.setAttribute("data-theme", theme);
+  themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+  try{ localStorage.setItem("confucius-theme", theme); }catch(e){}
+}
+themeBtn.addEventListener("click", ()=>{
+  const cur = document.documentElement.getAttribute("data-theme") || "light";
+  applyTheme(cur === "dark" ? "light" : "dark");
+});
+
+/* ============ 複製安裝指令 ============ */
+const copyBtn = document.getElementById("copyBtn");
+copyBtn.addEventListener("click", async ()=>{
+  try{
+    await navigator.clipboard.writeText("clawhub install confucius-ai-conversation");
+    const original = copyBtn.textContent;
+    copyBtn.textContent = "✓";
+    setTimeout(()=>copyBtn.textContent = original, 1500);
+  }catch(e){
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById("installCmd"));
+    const sel = window.getSelection();
+    sel.removeAllRanges(); sel.addRange(range);
+  }
+});
+
+/* ============ 初始化 ============ */
+(function init(){
+  let lang = "zh-Hant", theme = "light";
+  try{
+    lang = localStorage.getItem("confucius-lang") || 
+          (navigator.language && navigator.language.startsWith("zh") ? 
+            (navigator.language.includes("CN") || navigator.language.includes("Hans") ? "zh-Hans" : "zh-Hant") : 
+            (navigator.language && navigator.language.startsWith("en") ? "en" : "zh-Hant"));
+    theme = localStorage.getItem("confucius-theme") || 
+           (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }catch(e){}
+  applyTheme(theme);
+  setLang(lang);
+})();
+</script>
+</body>
+</html>
